@@ -2,14 +2,17 @@
 
 const app = angular.module('Mushrooms', ['ngRoute']);
 
-// app.config(($routeProvider) => {
+app.config(($routeProvider) => {
 
-// 	//add partial for mushroom list when factory is built
-// 	$routeProvider
-// 	.when('/')
-// 	.otherwise('/');
+	//add partial for mushroom list when factory is built
+	$routeProvider
+	.when('/', {
+		templateUrl: 'partials/main-view.html',
+		controller: 'mushroomCtrl'
+	})
+	.otherwise('/');
 
-// });
+});
 
 app.run(($location, FBCreds) => {
 	let authConfig = {

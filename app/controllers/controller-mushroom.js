@@ -1,8 +1,9 @@
 'use strict';
 
-app.controller('mushroomCtrl', function($scope, MushroomFactory) {
+app.controller('mushroomCtrl', function($scope, MushroomFactory, FilterFactory) {
 
 	$scope.mushroomData = [];
+	$scope.searchText = FilterFactory;
 
 	const showMushrooms = function() {
 		MushroomFactory.getMushroomsData()
@@ -14,4 +15,7 @@ app.controller('mushroomCtrl', function($scope, MushroomFactory) {
 
 	showMushrooms();
 
+});
+
+app.controller('searchCtrl', function($scope, FilterFactory) {
 });

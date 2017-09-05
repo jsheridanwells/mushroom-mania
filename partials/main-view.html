@@ -1,0 +1,9 @@
+<div class="main">
+	<div class="my-row" >
+		<div class="my-column" ng-repeat="mushroom in mushroomData | filter: searchText.search">
+			<p><strong>{{mushroom.name}}</strong></p>
+			<p>Description: {{mushroom.description}}</p>
+			<p></p>
+		</div>
+	</div>
+</div>

@@ -15,9 +15,8 @@ app.factory('MushroomFactory', function ($q, $http, FBCreds) {
 
 });
 
-// 0. create controller to call data
-// 1. construct url
-// 2. test w/ controller calling data
-// 3. organize data so it's printable
-// 4. create partial
-// 5. print to DOM in partial
+app.factory('FilterFactory', function () {
+	return {
+		search: ''
+	};
+});
